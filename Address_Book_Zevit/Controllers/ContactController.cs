@@ -35,13 +35,12 @@ namespace Address_Book_Zevit.Controllers
             return View(contact);
         }
 
-
         [HttpGet]
         public IActionResult AddContact()
         {
             return View();
-
         }
+
         [HttpPost]
         public IActionResult AddContact(Contact contact)
         {
@@ -65,7 +64,6 @@ namespace Address_Book_Zevit.Controllers
                 throw;
             }
         }
-
 
         [HttpGet]
         public IActionResult DeleteContact(int? id)
