@@ -1,0 +1,36 @@
+﻿@model Contact
+
+
+<div class="form-group">
+    <h2>@Model.id @Model.FullName</h2>
+    @*<input type="text" asp-for="id" class="form-control" />*@
+</div>
+<!--<div class="form-group">
+    <h5>--> @*@Model.FullName*@<!--</h5>-->
+    @*<input type="text" asp-for="FullName" class="form-control" />*@
+<!--</div>-->
+<div class="form-group">
+    <h5>@Model.Email</h5>
+    @*<input type="email" asp-for="Email" class="form-control" />*@
+</div>
+<div class="form-group">
+    <h5>@Model.PhoneNumber</h5>
+    @*<input type="text" asp-for="PhoneNumber" class="form-control" />*@
+
+</div>
+<div class="form-group">
+    <h5>@Model.PhysicalAddress</h5>
+    @*<input type="text" asp-for="PhysicalAddress" class="form-control" />*@
+</div>
+
+<div class="d-flex justify-content-end">
+    <form method="post" asp-action="DeleteContact" asp-route-id="@Model.id">
+        <button type="submit" class="btn btn-danger"> Delete</button>
+    </form>
+    <a style="background-color:darkslategray;color:white;border:none;"
+       asp-action="EditContact" asp-route-id="@Model.id" class="btn btn-primary ml-2">
+        Edit
+    </a>
+    <a asp-action="Index" class="btn btn-default">Cancel</a>
+
+</div>
